@@ -1,11 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import homeImg from '../assets/img/home.png'
+
+import Featured from '../components/Featured'
+import NewArrivals from '../components/NewArrivals'
+import NewsLetter from '../components/NewsLetter'
+import Product from '../components/Product'
+import Story from '../components/Story'
+import Testimonial from '../components/Testimonial'
 
 const Home = () => {
   return (
     <div className='main'>
-      <section className="home" id="home">
+      <div className="home" id="home">
                 <div className="home__container container grid">
                     <div className="home__img-bg">
                         <img src={homeImg} alt="" className="home__img" />
@@ -40,7 +48,13 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        <Featured/>
+        <Story/>
+        <Product/>
+        <Testimonial/>
+        <NewArrivals/>
+        <NewsLetter/>
     </div>
   )
 }

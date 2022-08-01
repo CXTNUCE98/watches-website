@@ -22,9 +22,11 @@ const Navbar = () => {
             <li className="nav__item">
               <a href="#Featured" className='nav__link '>Featured</a>
             </li>
-            <li className="nav__item">
-              <a href="#Products" className='nav__link '>Products</a>
-            </li>
+            <Link to="/products">
+              <li className="nav__item">
+                <div className='nav__link '>Products</div>
+              </li>
+            </Link>            
             <li className="nav__item">
               <a href="#News" className='nav__link '>News</a>
             </li>
@@ -36,9 +38,11 @@ const Navbar = () => {
 
         <div className="nav__btns">
           <BsMoon />
+          <Link to='/cart'>
           <div className="nav__shop">
             <RiShoppingBagLine />
           </div>
+          </Link>
           <div className="nav__shop">
             <BsGrid />
           </div>
