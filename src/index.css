@@ -108,7 +108,13 @@ button {
 
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
-body.dark-theme {
+
+#light .main{
+  background-color: white;
+}
+
+#dark .main{
+  background-color: hsl(0, 0%, 12%);
   --first-color: hsl(31, 76%, 74%);
   --button-color: hsl(0, 0%, 24%);
   --button-color-alt: hsl(0, 0%, 28%);
@@ -117,6 +123,7 @@ body.dark-theme {
   --body-color: hsl(0, 0%, 12%);
   --container-color: hsl(0, 0%, 16%);
   --border-color: hsl(0, 0%, 20%);
+  color: var(--title-color);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -130,26 +137,84 @@ body.dark-theme {
     Color changes in some parts of 
     the website, in dark theme 
 ==========*/
-.dark-theme .change-theme,
+#dark .nav__logo{
+  color: hsl(0, 0%, 95%);
+}
+
+#dark .nav__link{
+  color: hsl(0, 0%, 95%);
+}
+
+#dark .button--gray{
+  color: hsl(0, 0%, 15%);;
+}
+
+#dark .dark-theme .change-theme,
 .dark-theme .nav__toggle,
 .dark-theme .nav__shop,
 .dark-theme .button--gray {
   color: hsl(0, 0%, 15%);
 }
 
-.dark-theme .scroll-header {
+#dark .dark-theme .scroll-header {
   box-shadow: 0 1px 4px hsla(0, 0%, 4%, .3);
 }
 
-.scroll-header .change-theme,
+#dark .scroll-header .change-theme,
 .scroll-header .nav__toggle,
 .scroll-header .nav__shop {
   color: var(--title-color);
 }
 
-.dark-theme::-webkit-scrollbar {
+#dark .dark-theme::-webkit-scrollbar {
   background: hsl(0, 0%, 30%);
 }
+
+#dark .footer{
+  background-color: hsl(0, 0%, 12%);
+  --first-color: hsl(31, 76%, 74%);
+  --button-color: hsl(0, 0%, 24%);
+  --button-color-alt: hsl(0, 0%, 28%);
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 75%);
+  --body-color: hsl(0, 0%, 12%);
+  --container-color: hsl(0, 0%, 16%);
+  --border-color: hsl(0, 0%, 20%);
+  color: var(--title-color);
+}
+
+#dark .products__container{
+  background-color: hsl(0, 0%, 12%);
+
+}
+
+#dark .header{
+  background-color: hsl(0, 0%, 12%);
+  --first-color: hsl(31, 76%, 74%);
+  --button-color: hsl(0, 0%, 24%);
+  --button-color-alt: hsl(0, 0%, 28%);
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 75%);
+  --body-color: hsl(0, 0%, 12%);
+  --container-color: hsl(0, 0%, 16%);
+  --border-color: hsl(0, 0%, 20%);
+  color: var(--title-color);
+}
+
+#dark .products__container{
+  background-color: hsl(0, 0%, 12%);
+  --first-color: hsl(31, 76%, 74%);
+  --button-color: hsl(0, 0%, 24%);
+  --button-color-alt: hsl(0, 0%, 28%);
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 75%);
+  --body-color: hsl(0, 0%, 12%);
+  --container-color: hsl(0, 0%, 16%);
+  --border-color: hsl(0, 0%, 20%);
+  color: var(--title-color);
+}
+
+
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -850,7 +915,7 @@ body.dark-theme {
 }
 
 /*=============== CART ===============*/
-.cart {
+/* .cart {
   position: fixed;
   background-color: var(--body-color);
   z-index: var(--z-fixed);
@@ -956,12 +1021,12 @@ body.dark-theme {
 .cart__prices-total {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
-}
+} */
 
 /* Show cart */
-.show-cart {
-  right: 0;
-}
+/* .show-cart {
+  right: 0; */
+/* } */
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -1022,8 +1087,8 @@ body.dark-theme {
   }
 
   .cart {
-    width: 420px;
-    box-shadow: -2px 0 4px hsla(0, 0%, 15%, .1);
+    width: 80%;
+    /* box-shadow: -2px 0 4px hsla(0, 0%, 15%, .1); */
   }
 
   .nav {

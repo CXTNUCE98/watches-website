@@ -1,11 +1,19 @@
 import React from 'react'
-import { BsWatch } from 'react-icons/bs';
 import {AiOutlineClose} from 'react-icons/ai'
-import {BsMoon, BsGrid} from 'react-icons/bs'
+import {BsMoon, BsGrid, BsWatch} from 'react-icons/bs'
 import {RiShoppingBagLine} from 'react-icons/ri'
+import {GrSun} from 'react-icons/gr'
+
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+
+
+const Header = ({theme, setTheme}) => {
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"))
+  }
+
   return (
     <div className='header'>
       <nav className="nav container">
@@ -37,7 +45,10 @@ const Navbar = () => {
         </div>
 
         <div className="nav__btns">
-          <BsMoon />
+          <div className='lTheme' onClick={toggleTheme}>
+            {theme === "light" ? <BsMoon  /> : <GrSun  />}
+            
+          </div>
           <Link to='/cart'>
           <div className="nav__shop">
             <RiShoppingBagLine />
@@ -52,4 +63,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Header
