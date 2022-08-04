@@ -23,7 +23,7 @@ function App() {
           <Route path="/cart" element={<Cart />}/>
           <Route path="/products" element={<Products />}/>
         </Routes>
-        <Footer theme={theme} setTheme={setTheme}/>
+        <Footer />
       </div>
     </ThemeContext.Provider>
   );

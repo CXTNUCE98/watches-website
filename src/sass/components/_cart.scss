@@ -1,40 +1,55 @@
 /*=============== CART ===============*/
+.main-cart{
+    width: 100%;
+}
+
 .cart{
+    position: relative;
     padding-top: 120px;
     margin: auto;
     justify-content: center;
 
     &__title{
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         text-align: center;
         margin: 80px 0 100px;
+        color: var(--text-color);
     }
 
     &__container{
         display: flex;
         width: auto;
-        font-size: 1.4rem;
+        font-size: .9rem;
         color: #999;
         font-weight: 400;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
-        background-color: #fff;
         border-bottom: 0;
-        text-transform: uppercase;
 
         &__wrapper{
             width: 77%;
 
-            // & >tr >td{
-            //     border: 1px solid #ebebeb;
-            // }
+            & >tr  + tr{
+                
+            }
             & table{
                 width: 100%;
+                border-collapse: collapse;
+
+                & tbody > tr {
+                    border-top: 1px solid var(--border-color);
+                    border-left: 1px solid var(--border-color);
+                    border-bottom: 1px solid var(--border-color);
+                }
             }
 
-            &__col{       
+            &__col{    
                 width: auto;    
-                border: 1px solid #ebebeb;
+                border: 1px solid var(--border-color);
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+                text-transform: uppercase;
+
 
                 & span{
                     padding-left: 1rem;
@@ -42,52 +57,174 @@
                 }
             }
         }
+
+        &__wrapper + .cart__summary{
+            margin-left: 20px;
+        }
     }
 
     &__summary{
-        position: relative;
+        background-color: var(background-color);
         width: 23%;
-        border: 1px solid #ebebeb;
+        border: 1px solid var(--border-color);
+        color: var(--title-color);
 
         &__title{
             display: block;
+            color: var(--title-color);
+            font-family: Jost,sans-serif;
+            font-weight: 400;
+            line-height: 1;
+            font-size: 2.8rem;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            padding-left: 2rem;
+            padding-top: 1.5rem;
+            text-align: left;
+            font-size: 1.4rem;
+        }
+
+        &__shipping{
+            display: block;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        &__sub{
+            display: block;
+            padding: 10px;
+
+            &__total{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            &__fee{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            &__totals{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding: 10px;
+            }
+        }
+
+        &__discount{
+            display: block;
+            padding: 20px;
+            border-top: 1px solid var(--border-color) ;
+
+        }
+
+        &__button{
+            display: block;
+            color: var(--button-color);
+            padding: 20px;
+
+            &__btn{
+                width: 100%;
+                padding: 17px 10px 16px;
+                font-size: 16px;
+                text-transform: uppercase;
+                border: 1px solid #304650;
+                cursor: pointer;
+                font-family: Jost,sans-serif,'Helvetica Neue',Helvetica,Arial,sans-serif;
+                background-color: var(--light-b-button);
+                color: var(--light-button);
+
+                &:hover{
+                    background: #304650;
+                    border: 1px solid #304650;
+                    color: var(--container-color);
+                }
+            }
+
+            &__desc{
+                display: block;
+                margin-top: 20px;
+                color: var(--title-color);
+            }
         }
     }
 
     &__item{
         display: flex;
         align-items: center;
-        justify-content: center;
-        border: 1px solid #ebebeb;
-        padding: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: var(--title-color);   
 
         &__img{
             width: auto;
             height: 100px;
+            padding: 10px;
+            margin-left: 20px;
 
             &__name{
-                padding: 20px;
+                padding-left: 40px;
             }
         }
     }
 
     &__price{
-        border: 1px solid #ebebeb;
+        border: 1px solid var(--border-color);
+        text-align: center;
+        color: var(--title-color);   
         padding: 20px;
     }
 
     &__qty{
-        border: 1px solid #ebebeb;
+        border: 1px solid var(--border-color);
         padding: 20px;
+        color: var(--title-color);   
+        text-align: center;
     }
 
     &__subtotal{
-        border: 1px solid #ebebeb;
+        border: 1px solid var(--border-color);
         padding: 20px;
+        color: var(--title-color);   
+        text-align: center;
     }
 
-    
+    &__button{
+        display: flex;
+        width: 100%;
+        padding-top: 20px;
+        justify-content: space-between;
+
+        &__btn{
+            width: max-content;
+            padding: 17px 10px 16px;
+            font-size: 16px;
+            text-transform: uppercase;
+            border: 1px solid #304650;
+            cursor: pointer;
+            font-family: Jost,sans-serif,'Helvetica Neue',Helvetica,Arial,sans-serif;
+            background-color: var(--light-b-button);
+            color: var(--light-button);
+
+            &:hover{
+                background: #304650;
+                border: 1px solid #304650;
+                color: var(--container-color);
+            }
+        }
+
+        &__btn + &__btn{
+            margin-left: 20px;
+        }
+    }    
 }
+
 
 
 

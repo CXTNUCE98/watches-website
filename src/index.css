@@ -214,6 +214,22 @@ button {
   color: var(--title-color);
 }
 
+#dark .main-cart{
+  background-color: hsl(0, 0%, 12%);
+  --first-color: hsl(31, 76%, 74%);
+  --button-color: hsl(0, 0%, 24%);
+  --button-color-alt: hsl(0, 0%, 28%);
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 75%);
+  --body-color: hsl(0, 0%, 12%);
+  --container-color: hsl(0, 0%, 16%);
+  --border-color: hsl(0, 0%, 20%);
+  color: var(--title-color);
+  --light-button: #f5efef;
+    --light-b-button: #2b2b2b;
+}
+
+
 
 
 /*=============== REUSABLE CSS CLASSES ===============*/

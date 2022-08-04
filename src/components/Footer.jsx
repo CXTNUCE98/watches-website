@@ -1,6 +1,10 @@
 import React from 'react'
 
-const Footer = ({theme, setTheme}) => {
+import {FaFacebookF} from 'react-icons/fa'
+import {BsTwitter} from 'react-icons/bs'
+import {FiInstagram} from 'react-icons/fi'
+
+const Footer = () => {
     return (
         <div className="footer section">
             <div className="footer__container container grid">
@@ -55,16 +59,16 @@ const Footer = ({theme, setTheme}) => {
                     <h3 className="footer__title">Social</h3>
 
                     <ul className="footer__social">
-                        <a href="https://www.facebook.com/" target="_blank" className="footer__social-link">
-                            <i className='bx bxl-facebook'></i>
+                        <a href="https://www.facebook.com/" className="footer__social-link">
+                            <FaFacebookF />
                         </a>
 
-                        <a href="https://twitter.com/" target="_blank" className="footer__social-link">
-                            <i className='bx bxl-twitter' ></i>
+                        <a href="https://twitter.com/" className="footer__social-link">
+                            <BsTwitter />
                         </a>
 
-                        <a href="https://www.instagram.com/" target="_blank" className="footer__social-link">
-                            <i className='bx bxl-instagram' ></i>
+                        <a href="https://www.instagram.com/" className="footer__social-link">
+                            <FiInstagram/>
                         </a>
                     </ul>
                 </div>
