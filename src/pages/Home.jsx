@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import { testimonialList } from '../assets/fake-data/testimonial'
+import { featured } from '../assets/fake-data/featured'
 
 import homeImg from '../assets/img/home.png'
 
@@ -12,9 +14,13 @@ import Story from '../components/Story'
 import Testimonial from '../components/Testimonial'
 
 const Home = () => {
+
+    const featuredData = featured
+    const product = featured
+
     return (
         <div className='main' >
-        <div className="home" id="home">
+            <div className="home" id="home">
                     <div className="home__container container grid">
                         <div className="home__img-bg">
                             <img src={homeImg} alt="" className="home__img" />
@@ -50,9 +56,9 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            <Featured/>
+            <Featured featuredData={featuredData} />
             <Story/>
-            <Product/>
+            <Product product={product}  />
             <Testimonial 
                 data={testimonialList}
                 control={true}

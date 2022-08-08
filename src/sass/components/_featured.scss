@@ -63,3 +63,13 @@
         opacity: 0;
     }
 }
+
+.openModalBtn{
+    padding: 0.8em 1.4rem;
+    color: #fff;
+    background-color: var(--button-color);
+
+    &:hover{
+        background-color: rgb(26, 25, 25);
+    }
+}

@@ -109,9 +109,6 @@ button {
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 
-#light .main{
-  background-color: white;
-}
 
 #dark .main{
   background-color: hsl(0, 0%, 12%);
@@ -226,11 +223,23 @@ button {
   --border-color: hsl(0, 0%, 20%);
   color: var(--title-color);
   --light-button: #f5efef;
-    --light-b-button: #2b2b2b;
+  --light-b-button: #2b2b2b;
 }
 
-
-
+#dark .product-view{
+  background-color: hsl(0, 0%, 12%);
+  --first-color: hsl(31, 76%, 74%);
+  --button-color: hsl(0, 0%, 24%);
+  --button-color-alt: hsl(0, 0%, 28%);
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 75%);
+  --body-color: hsl(0, 0%, 12%);
+  --container-color: hsl(0, 0%, 16%);
+  --border-color: hsl(0, 0%, 20%);
+  color: var(--title-color);
+  --light-button: #f5efef;
+  --light-b-button: #2b2b2b;
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -282,6 +291,11 @@ button {
   z-index: var(--z-fixed);
   /*For animation dark mode*/
   transition: .4s;
+}
+
+.back-nav{
+  background-color: var(--body-color);
+  box-shadow: 0 1px 4px hsl(0deg 4% 15% / 10%);
 }
 
 .nav {
@@ -455,6 +469,13 @@ button {
   padding: 1.25rem 2rem;
   font-weight: var(--font-medium);
   transition: .3s;
+}
+
+.slide-container__box__btn{
+  box-shadow: 0 4px 12px hsl(0deg 0% 20% / 10%);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
 }
 
 .button:hover {
@@ -632,6 +653,10 @@ button {
   box-shadow: 0 8px 32px hsla(0, 0%, 10%, .1);
 }
 
+.product-view-modal{
+  background-color: rgba(68, 67, 67, .5);
+}
+
 /*=============== TESTIMONIAL ===============*/
 .testimonial__container {
   row-gap: 4rem;
@@ -733,6 +758,10 @@ button {
 .swiper-button-next {
   right: initial;
   left: 4rem;
+}
+
+.slides__quote{
+  box-shadow: 0 4px 12px hsl(0deg 0% 20% / 10%);
 }
 
 /*=============== NEW ===============*/
@@ -1094,6 +1123,35 @@ button {
 
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
+  }  
+}
+
+@media screen and (max-width: 767px) {
+  .each-slide{
+    display: block;
+  }
+
+  .slide-container__box{
+    bottom: 40%;
+  }
+
+  .cart__container{
+    flex-direction: column-reverse;
+  }
+  
+  .cart__summary{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 1180px){
+  .cart__button__box{
+    flex-direction: column  ;
+  }
+
+  .cart__button__btn{
+    padding: 16px 16px;
   }
 }
 
@@ -1197,6 +1255,7 @@ button {
     grid-template-columns: repeat(4, max-content);
     justify-content: space-between;
   }
+
   .footer__title {
     font-size: var(--h3-font-size);
   }
@@ -1254,6 +1313,10 @@ button {
   .testimonial__container {
     padding-bottom: 4rem;
   }
+
+  .each-slide{
+    gap: 6rem;
+  }
 }
 
 /* For large devices */
@@ -1279,6 +1342,10 @@ button {
   .testimonial__img {
     right: 5rem;
     top: 5rem;
+  }
+
+  .each-slide{
+    column-gap: 13rem;
   }
 
   .scrollup {

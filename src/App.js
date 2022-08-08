@@ -7,6 +7,9 @@ import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Products from "./pages/Products";
+import Product from "./pages/Product";
+import ProductView from "./components/ProductView";
+import ProductCard from "./components/ProductCard";
 
 export const ThemeContext = createContext(null)
 
@@ -22,6 +25,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />}/>
           <Route path="/products" element={<Products />}/>
+          <Route path="/products/:slug" element={<Product/>}/>
+          {/* <Route path="/products/:slug" element={<Product />}/> */}
         </Routes>
         <Footer />
       </div>

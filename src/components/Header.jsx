@@ -37,25 +37,25 @@ const Header = ({theme, setTheme}) => {
     <div className={`header ${backnav}`} >
       <nav className="nav container">
         <Link to='/'>
-          <div className={`nav__logo ${backnav}`}>
+          <div className={`nav__logo `}>
             <BsWatch/>Rolex
           </div>
         </Link>
         <div className="nav__menu">
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#Home" className={`nav__link ${backnav}`}>Home</a>
+              <a href="#Home" className={`nav__link `}>Home</a>
             </li>
             <li className="nav__item">
-              <a href="#Featured" className={`nav__link ${backnav}`}>Featured</a>
+              <a href="#Featured" className={`nav__link `}>Featured</a>
             </li>
             <Link to="/products">
               <li className="nav__item">
-                <div className={`nav__link ${backnav}`}>Products</div>
+                <div className={`nav__link `}>Products</div>
               </li>
             </Link>            
             <li className="nav__item">
-              <a href="#News" className={`nav__link ${backnav}`}>News</a>
+              <a href="#News" className={`nav__link `}>News</a>
             </li>
           </ul>
           <div className="nav__close">
@@ -63,17 +63,17 @@ const Header = ({theme, setTheme}) => {
           </div>
         </div>
 
-        <div className={`nav__btns ${backnav}`}>
-          <div className={`lTheme ${backnav}`} onClick={toggleTheme}>
+        <div className={`nav__btns `}>
+          <div className={`lTheme `} onClick={toggleTheme}>
             {theme === "light" ? <BsMoon  /> : <BsSun  />}
             
           </div>
           <Link to='/cart'>
-          <div className={`nav__shop ${backnav}`}>
+          <div className={`nav__shop `}>
             <RiShoppingBagLine />
           </div>
           </Link>
-          <div className={`nav__shop ${backnav}`}>
+          <div className={`nav__shop `}>
             <BsGrid />
           </div>
         </div>

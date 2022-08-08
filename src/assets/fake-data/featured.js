@@ -5,17 +5,20 @@ import featured3 from '../img/featured3.png'
 export const featured = [
     {
         name: "Jazzmaster",
-        imgFeatured: featured1,
-        price: 1050
+        img: featured1,
+        price: 1050,
+        slug: 'jazzmaster2'
     },
     {
         name: "Ingersoll",
-        imgFeatured: featured2,
-        price: 250
+        img: featured2,
+        price: 250,
+        slug: 'ingersoll'
     },
     {
         name: "Rose gold",
-        imgFeatured: featured3,
-        price: 1050
+        img: featured3,
+        price: 1050,
+        slug: 'rose-gold'
     },
 ]
